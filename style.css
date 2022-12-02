@@ -53,7 +53,7 @@ body {
 .container {
   max-width: 1800px;
   margin: 0 auto;
-  padding: 0 20px 55px 20px;
+  padding: 0 20px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -87,16 +87,22 @@ img {
   display: block;
   max-width: 100%;
 }
-.header {
-  height: 112px;
+a {
+  cursor: pointer;
 }
 .header__contaiter {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #efefef;
-  padding-top: 31px;
-  padding-bottom: 31px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .header__contaiter {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
 }
 .header__left-part,
 .header__right-part {
@@ -129,12 +135,19 @@ img {
   color: var(--accent-color);
 }
 .header__switch {
-  width: 94px;
+  width: 70px;
   height: 45px;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 100px;
+  border-radius: 5px;
   margin-right: 14px;
 }
+@media screen and (min-width: 768px) {
+  .header__switch {
+    width: 94px;
+    border-radius: 100px;
+  }
+}
+
 .header__switch::before {
   content: '';
   display: inline-block;
@@ -160,19 +173,21 @@ img {
 .header__sap:hover {
   background-color: var(--accent-color);
 }
-.title {
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--title-color);
+
+.hero__container {
+  padding-top: 34px;
+  padding-bottom: 54px;
 }
 @media screen and (min-width: 768px) {
-  .title {
-    font-size: 65px;
+  .hero__container {
+    padding-top: 25px;
+    padding-bottom: 64px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .title {
-    font-size: 120px;
+  .hero__container {
+    padding-top: 36px;
+    padding-bottom: 120px;
   }
 }
 .hero__wrap {
@@ -182,17 +197,60 @@ img {
   padding-top: 64px;
   margin-right: 63px;
 }
+.title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--title-color);
+  margin-bottom: 3px;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 65px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 120px;
+    margin-bottom: 7px;
+  }
+}
 .hero_text {
+  font-size: 14px;
+  font-weight: 600;
   display: flex;
   align-items: center;
+  color: #333333;
+}
+@media screen and (min-width: 768px) {
+  .hero_text {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero_text {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 .hero_text::before {
   content: '';
   display: inline-block;
-  width: 195px;
+  width: 56px;
   height: 1px;
   margin-right: 20px;
   background-color: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .hero_text::before {
+    width: 66px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero_text::before {
+    width: 195px;
+  }
 }
 @media screen and (min-width: 768px) {
   .img-dragon {
@@ -229,6 +287,48 @@ img {
     justify-content: space-between;
   }
 }
+.advantages__container {
+  padding-bottom: 56px;
+}
+@media screen and (min-width: 768px) {
+  .advantages__container {
+    padding-bottom: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__container {
+    padding-bottom: 167px;
+  }
+}
+.secondary__title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--title-color);
+}
+@media screen and (min-width: 768px) {
+  .secondary__title {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .secondary__title {
+    font-size: 65px;
+  }
+}
+.advantages__title {
+  text-align: center;
+  padding-bottom: 22px;
+}
+@media screen and (min-width: 768px) {
+  .advantages__title {
+    padding-bottom: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__title {
+    padding-bottom: 43px;
+  }
+}
 .advantages__list {
   display: flex;
   flex-wrap: wrap;
@@ -241,21 +341,23 @@ img {
 }
 .advantages__item {
   width: 320px;
-  height: 191px;
+  height: fit-content;
   border: 2px solid var(--main--color);
   border-radius: 9px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .advantages__item {
-    width: 355px;
-    height: 239px;
+    width: 350px;
+  }
+  .advantages__item:nth-child(2n + 1) {
+    width: 424px;
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantages__item {
-    width: 428px;
-    height: 245px;
+    margin-right: 0;
   }
 }
 .advantages__item:last-child {
@@ -267,14 +369,14 @@ img {
 .advantages__img {
   margin-bottom: 20px;
 }
-.advantages__title {
+.advantages__title-secondary {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--secondary-title-color);
 }
 @media screen and (min-width: 768px) {
-  .advantages__title {
+  .advantages__title-secondary {
     font-size: 20px;
   }
 }
@@ -296,9 +398,36 @@ img {
 }
 .howwork__container {
   position: relative;
+  padding-top: 52px;
+  padding-bottom: 56px;
 }
-.howwork .secondary__title {
+@media screen and (min-width: 768px) {
+  .howwork__container {
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .howwork__container {
+    padding-top: 46px;
+    padding-bottom: 117px;
+  }
+}
+
+.howwork__title {
   text-align: center;
+  margin-bottom: 22px;
+}
+@media screen and (min-width: 768px) {
+  .howwork__title {
+    text-align: inherit;
+    margin-bottom: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .howwork__title {
+    margin-bottom: 58px;
+  }
 }
 .howwork__inner {
   display: flex;
@@ -341,22 +470,85 @@ img {
     bottom: 0;
   }
 }
-.secondary__title {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--title-color);
-  margin-bottom: 22px;
+
+.questions__container {
+  padding-top: 52px;
+  padding-bottom: 59px;
 }
 @media screen and (min-width: 768px) {
-  .secondary__title {
-    font-size: 45px;
-    margin-bottom: 38px;
+  .questions__container {
+    padding-top: 63px;
+    padding-bottom: 70px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .secondary__title {
-    font-size: 65px;
-    margin-bottom: 50px;
+  .questions__container {
+    display: flex;
+    align-items: center;
+    padding-top: 119px;
+    padding-bottom: 119px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions__left-part {
+    margin-right: 113px;
+  }
+}
+.questions__title {
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .questions__title {
+    margin-bottom: 39px;
+  }
+}
+.questions__text {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+@media screen and (min-width: 768px) {
+  .questions__text {
+    margin-bottom: 31px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions__text {
+    margin-bottom: 0;
+  }
+}
+.faq__title {
+  background: #f6f6f6;
+  border: 1px solid #ffd600;
+  border-radius: 5px;
+  padding: 12px 16px;
+  margin-bottom: 7px;
+  color: var(--title-color);
+}
+@media screen and (min-width: 768px) {
+  .faq__title {
+    padding: 17px 20px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__title {
+    margin-bottom: 19px;
+  }
+}
+.faq__text {
+  font-size: 14px;
+  margin-bottom: 21px;
+}
+@media screen and (min-width: 768px) {
+  .faq__text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__text {
+    margin-bottom: 25px;
   }
 }
 .payment {
@@ -366,6 +558,18 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .payment__container {
+    padding-top: 40px;
+    padding-bottom: 31px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .payment__container {
+    padding-top: 77px;
+    padding-bottom: 82px;
+  }
 }
 .payment__list {
   display: flex;
@@ -380,6 +584,7 @@ img {
   height: 42px;
   background-color: #ffffff;
   border-radius: 9px;
+  margin-top: 12px;
 }
 @media screen and (min-width: 768px) {
   .payment__item {
@@ -393,9 +598,7 @@ img {
     height: 104px;
   }
 }
-.payment__item:nth-child(n + 5) {
-  margin-top: 12px;
-}
+
 .payment__img {
   margin: 0 auto;
   max-width: 90%;
@@ -407,6 +610,20 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 29px;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    padding-top: 16px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 .footer__text {
   font-weight: 300;
