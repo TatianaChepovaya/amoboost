@@ -341,7 +341,7 @@ a {
 }
 .advantages__item {
   width: 320px;
-  height: fit-content;
+
   border: 2px solid var(--main--color);
   border-radius: 9px;
   margin-bottom: 20px;
@@ -351,12 +351,14 @@ a {
     width: 350px;
   }
   .advantages__item:nth-child(2n + 1) {
-    width: 424px;
     margin-right: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantages__item {
+    width: 424px;
+  }
+  .advantages__item:nth-child(2n + 1) {
     margin-right: 0;
   }
 }
