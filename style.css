@@ -55,18 +55,6 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media screen and (min-width: 768px) {
-  .container {
-    padding-bottom: 65px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .container {
-    padding-top: 36px;
-    padding-bottom: 116px;
-  }
-}
-
 .title {
   font-size: 28px;
   color: var(--title-color);
@@ -659,18 +647,64 @@ footer {
 }
 
 /*Catalog*/
-.catalog__container {
-  display: flex;
+
+.breadcrumb {
+  display: none;
 }
 @media screen and (min-width: 1024px) {
-  .catalog__list {
+  .breadcrumb {
+    display: block;
+  }
+}
+.breadcrumb__item {
+  display: inline;
+  font-weight: 400;
+  color: #2b2b2b;
+}
+.breadcrumb__item + .breadcrumb__item::before {
+  margin: 0 10px;
+  color: #b5b5b5;
+  content: '\276F';
+}
+.container__inner {
+  display: flex;
+  margin-top: 17px;
+}
+@media screen and (min-width: 768px) {
+  .container__inner {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container__inner {
+    margin-top: 52px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .catalog__menu {
     width: 304px;
-    height: 712px;
-    background-color: #ffb74d;
     margin-right: 34px;
   }
 }
-
+.catalog__list {
+  background-color: #ffffff;
+}
+.catalog__item {
+  display: flex;
+  padding: 10px 10px 10px 21px;
+}
+.catalog__item-img {
+  margin-right: 20px;
+}
+.catalog__item-text {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  border-bottom: 1px solid #f8f8f8;
+}
+.catalog__item-arrow {
+}
 .catalog__info {
   width: 1491px;
 }
@@ -943,23 +977,36 @@ footer {
   .whywe__title {
     margin-bottom: 39px;
   }
-
-.whywe__list{
-
+}
+.whywe__list {
   display: flex;
   flex-wrap: wrap;
 }
-.whywe__item-line{
-  position: absolute;
-  top: 12px;
-  left: 12px;
 
-}
 .whywe__item {
-   position: relative;
+  position: relative;
   width: 40%;
   border: 2px solid var(--main--color);
   border-radius: 9px;
+  text-align: center;
+  color: #000000;
+  padding: 35px 38px 43px 38px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.whywe__item-line {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.whywe__item-img {
+  margin: 0 auto;
+}
+.whywe__item-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.whywe__item-text {
 }
 .info,
 .info__text--pading {
