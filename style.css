@@ -25,20 +25,6 @@ body {
   font-size: 16px;
   color: var(--main-text-color);
   margin: 0;
-  background-image: url(./images/bg-hero.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    background-image: url(./images/bg-hero-tablet.png);
-  }
-}
-@media screen and (min-width: 1024px) {
-  body {
-    background-image: url(./images/bg-hero-desk.png);
-  }
 }
 
 .link {
@@ -727,6 +713,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 24px;
+  border-radius: 9px;
 }
 @media screen and (min-width: 768px) {
   .actual__bg {
@@ -981,18 +968,32 @@ footer {
 .whywe__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .whywe__item {
   position: relative;
-  width: 40%;
+  width: 71%;
   border: 2px solid var(--main--color);
   border-radius: 9px;
   text-align: center;
   color: #000000;
   padding: 35px 38px 43px 38px;
-  margin-right: 20px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .whywe__item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .whywe__item {
+    width: 43%;
+    margin-right: 20px;
+  }
+  .whywe__item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 .whywe__item-line {
   position: absolute;
@@ -1055,6 +1056,20 @@ footer {
   .info__text {
     margin-bottom: 17px;
   }
+}
+
+/*Card*/
+@media screen and (min-width: 1024px) {
+  .product__container {
+    width: 1491px;
+  }
+}
+
+.option__item {
+  display: flex;
+  justify-content: space-between;
+  background: #f6f6f6;
+  border-radius: 5px;
 }
 
 /*Terms and conditions*/
