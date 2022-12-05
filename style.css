@@ -42,7 +42,7 @@ body {
 .container {
   max-width: 1800px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
 }
 .title {
   font-size: 28px;
@@ -1093,8 +1093,13 @@ footer {
   }
 }
 .banner__bg-inner {
-  width: 61%;
   padding: 29px;
+}
+@media screen and (min-width: 768px) {
+  .banner__bg-inner {
+    width: 61%;
+    padding: 29px;
+  }
 }
 .banner__title {
   font-size: 24px;
