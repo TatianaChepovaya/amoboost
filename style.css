@@ -1082,6 +1082,56 @@ footer {
     margin-bottom: 31px;
   }
 }
+.banner__bg-inner {
+  padding: 29px;
+}
+.banner__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.banner__stars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.banner__stars-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.banner__stars-item {
+  margin-right: 4px;
+}
+.banner__stars-item:last-child {
+  margin-right: 10px;
+}
+.banner__stars-text {
+  background: rgba(255, 255, 255, 0.38);
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 6px;
+}
+.banner__list {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+.banner__item {
+  width: 43%;
+}
+.banner__item-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.banner__item-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
 @media screen and (min-width: 1024px) {
   .product__container {
     width: 1491px;
