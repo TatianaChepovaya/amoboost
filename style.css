@@ -6,10 +6,12 @@
   --title-color: #252525;
   --secondary-title-color: #202020;
 }
-html {
+*,
+html,
+::before,
+::after {
   box-sizing: border-box;
 }
-
 h1,
 h2,
 h3,
@@ -20,7 +22,8 @@ ul {
 }
 
 body {
-  font-family: 'gilroy-bold', sans-serif;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   color: var(--main-text-color);
@@ -495,8 +498,8 @@ a {
   }
 }
 .faq__title {
-  background: #f6f6f6;
-  border: 1px solid #ffd600;
+  background: var(--main--color);
+  border: 1px solid var(--accent-color);
   border-radius: 5px;
   padding: 12px 16px;
   margin-bottom: 7px;
@@ -642,6 +645,7 @@ footer {
   }
 }
 .breadcrumb__item {
+  font-family: 'Gilroy-Light', sans-serif;
   display: inline;
   font-weight: 400;
   color: #2b2b2b;
@@ -1059,6 +1063,7 @@ footer {
 
 /*Card*/
 .banner__bg {
+  position: relative;
   height: 314px;
   background-image: linear-gradient(102.26deg, rgba(17, 17, 17, 0.4) 22.26%, rgba(17, 17, 17, 0) 67.61%),
     url(./images/bg-card-mob.png);
@@ -1090,6 +1095,21 @@ footer {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 10px;
+  line-height: 1.33;
+}
+@media screen and (min-width: 768px) {
+  .banner__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 1.31;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__title {
+    font-size: 50px;
+    margin-bottom: 34px;
+    line-height: 1.2;
+  }
 }
 .banner__stars {
   display: flex;
@@ -1116,20 +1136,139 @@ footer {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  bottom: 0;
+  bottom: 29px;
+}
+@media screen and (min-width: 768px) {
+  .banner__list {
+    bottom: 59px;
+  }
 }
 .banner__item {
-  width: 43%;
+  width: 44%;
+}
+@media screen and (min-width: 768px) {
+  .banner__item {
+    width: auto;
+    margin-right: 35px;
+  }
 }
 .banner__item-title {
   font-size: 32px;
   font-weight: 700;
   color: #ffffff;
+  margin-bottom: 4px;
+}
+@media screen and (min-width: 768px) {
+  .banner__item-title {
+    font-size: 35px;
+  }
 }
 .banner__item-text {
+  font-family: 'Gilroy-Light', sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #ffffff;
+  line-height: 1.13;
+}
+@media screen and (min-width: 768px) {
+  .banner__item-text {
+    font-size: 15px;
+  }
+}
+.card__pay {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--main--color);
+  border-radius: 9px;
+  padding: 22px 31px;
+  margin-bottom: 46px;
+}
+@media screen and (min-width: 768px) {
+  .card__pay {
+    width: 253px;
+    display: block;
+    padding: 22px 23px 32px 21px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__pay {
+    width: 285px;
+  }
+}
+.card__pay-money {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--title-color);
+}
+@media screen and (min-width: 768px) {
+  .card__pay-money {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__pay-money {
+  }
+}
+.card__pay-inner {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .card__pay-inner {
+    display: block;
+  }
+}
+.card__pay-title {
+  font-family: 'Gilroy-Medium', sans-serif;
+  color: #2b2b2b;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .card__pay-title {
+  }
+}
+.card__pay-text {
+  font-family: 'Gilroy-Light', sans-serif;
+  font-size: 14px;
+  margin-bottom: 17px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__pay {
+    width: 285px;
+  }
+}
+.accent {
+  font-family: 'Gilroy-Bold', sans-serif;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #373737;
+}
+.card__pay-btn {
+  border: 2px solid #f9b83f;
+  border-radius: 5px;
+  padding: 18px 40px;
+}
+@media screen and (min-width: 768px) {
+  .card__pay-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 206px;
+    font-weight: 700;
+    color: #2b2b2b;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__pay-btn {
+  }
+}
+.card__pay-btn--color {
+  background-color: #f9b83f;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1141,7 +1280,7 @@ footer {
 .option__item {
   display: flex;
   justify-content: space-between;
-  background: #f6f6f6;
+  background: var(--main--color);
   border-radius: 5px;
   padding: 23px 20px;
   margin-bottom: 15px;
