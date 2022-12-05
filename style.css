@@ -1289,7 +1289,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   .product__container {
-    max-height: 1491px;
+    max-width: 1491px;
   }
 }
 .option__title {
