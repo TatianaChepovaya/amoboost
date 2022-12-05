@@ -1062,6 +1062,9 @@ footer {
 }
 
 /*Card*/
+.card__pay-position {
+  position: relative;
+}
 .banner__bg {
   position: relative;
   height: 314px;
@@ -1077,17 +1080,18 @@ footer {
     height: 390px;
     background-image: linear-gradient(102.26deg, rgba(17, 17, 17, 0.4) 22.26%, rgba(17, 17, 17, 0) 67.61%),
       url(./images/bg-card-tablet.png);
-    margin-bottom: 21px;
+    margin-bottom: 64px;
   }
 }
 @media screen and (min-width: 1024px) {
   .banner__bg {
     background-image: linear-gradient(102.26deg, rgba(17, 17, 17, 0.4) 22.26%, rgba(17, 17, 17, 0) 67.61%),
       url(./images/bg-card.png);
-    margin-bottom: 31px;
+    margin-bottom: 91px;
   }
 }
 .banner__bg-inner {
+  width: 61%;
   padding: 29px;
 }
 .banner__title {
@@ -1182,17 +1186,24 @@ footer {
   border-radius: 9px;
   padding: 22px 31px;
   margin-bottom: 46px;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .card__pay {
+    position: absolute;
+    bottom: -25px;
+    right: 20px;
     width: 253px;
     display: block;
     padding: 22px 23px 32px 21px;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   .card__pay {
     width: 285px;
+    padding: 32px 16px 32px 25px;
+    bottom: -51px;
   }
 }
 .card__pay-money {
@@ -1207,6 +1218,7 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   .card__pay-money {
+    margin-bottom: 25px;
   }
 }
 .card__pay-inner {
@@ -1224,6 +1236,7 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   .card__pay-title {
+    margin-bottom: 17px;
   }
 }
 .card__pay-text {
@@ -1234,8 +1247,8 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .card__pay {
-    width: 285px;
+  .card__pay-text {
+    margin-bottom: 24px;
   }
 }
 .accent {
@@ -1264,6 +1277,7 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   .card__pay-btn {
+    width: 233px;
   }
 }
 .card__pay-btn--color {
