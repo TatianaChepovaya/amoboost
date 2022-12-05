@@ -1023,35 +1023,36 @@ footer {
     padding-bottom: 90px;
   }
 }
-.info__title {
+.info__title,
+.option__info-title {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 27px;
+  color: var(--title-color);
 }
 @media screen and (min-width: 768px) {
-  .info__title {
+  .info__title,
+  .option__info-title {
     font-size: 32px;
-    margin-bottom: 43px;
+    margin-bottom: 42px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .info__title {
+  .info__title,
+  .option__info-title {
     margin-bottom: 17px;
   }
 }
-.info__text {
+.info__text,
+.option__info-text {
+  font-family: 'Gilroy-Medium', sans-serif;
   margin-bottom: 27px;
 }
 @media screen and (min-width: 768px) {
-  .info__text {
-    margin-bottom: 43px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .info__text {
-    margin-bottom: 17px;
+  .info__text,
+  .option__info-text {
+    margin-bottom: 20px;
   }
 }
 
