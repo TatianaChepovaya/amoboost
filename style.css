@@ -945,9 +945,12 @@ footer {
     padding: 4px 10px;
   }
 }
-.reviews .product__container {
-  position: relative;
+@media screen and (min-width: 1024px) {
+  .reviews .product__container {
+    position: relative;
+  }
 }
+
 .reviews__title {
   margin-bottom: 29px;
 }
