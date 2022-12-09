@@ -1535,18 +1535,19 @@ padding-bottom: 46px;
   color: #373737;
 }
 .card__pay-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #2b2b2b;
   border: 2px solid #f9b83f;
   border-radius: 5px;
   padding: 18px 40px;
 }
 @media screen and (min-width: 768px) {
   .card__pay-btn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 206px;
-    font-weight: 700;
-    color: #2b2b2b;
     padding-right: 0;
     padding-left: 0;
     margin-bottom: 15px;
@@ -1699,17 +1700,139 @@ padding-bottom: 46px;
   color: #2d2d2d;
 }
 .payoption__container{
-padding-bottom: 52px;
+  padding-bottom: 52px;
+}
+.quick_order_price{
+  display: flex;
 }
 @media screen and (min-width: 768px) {
-  .payoption__container{
-  padding-bottom: 32px;
+  .quick_order_price{
+    justify-content: space-between;
   }
 }
-@media screen and (min-width: 1024px) {
-  .payoption__container{
-  padding-bottom: 79px;
+.quick_order_price_left{
+  margin-right: 40px;
+}
+
+.quick_order_title{
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 7px;
+  color: var(--title-color);
+}
+@media screen and (min-width: 768px) {
+  .quick_order_title{
+    font-size: 45px;
+    margin-bottom: 15px;
+   
   }
+}
+@media screen and (min-width: 768px) {
+  .quick_order_title{
+    font-size: 65px;
+    margin-bottom: 15px;
+   
+  }
+}
+.quick_order_time{
+  font-family: 'Gilroy-Light', sans-serif; 
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #898989;
+  line-height: 1.78;
+}
+@media screen and (min-width: 768px) {
+  .quick_order_time{
+  font-size: 18px;
+  }
+}
+.quick_order_promocode{
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #2d2d2d;
+  line-height: 1.78;
+}
+@media screen and (min-width: 768px) {
+  .quick_order_promocode{
+    font-size: 18px;
+  
+  }
+}
+.quick_order_price_right{
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .quick_order_price_right{
+   margin-top: 70px;
+   text-align: end;
+  }
+}
+
+.quick_order_money{
+ display: flex;
+flex-direction: column-reverse;
+}  
+@media screen and (min-width: 768px) {
+  .quick_order_money{
+display: block;
+}
+}
+.quick_order_money_cash{
+  font-size: 65px;
+  font-weight: 800;
+  color: var(--title-color);
+}
+.quick_order_money_title{
+  font-family: 'Gilroy-Light', sans-serif; 
+  font-size: 18px;
+  color: #898989;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .quick_order_money_title{
+   margin-right: 5px;
+  }
+}
+.quick_order_total_subtitle{
+  font-family: 'Gilroy-Light', sans-serif; 
+  font-size: 14px;
+  color: #2d2d2d;
+  line-height: 1.78;
+}
+.quick_order_input_promocode{
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: var(--accent-color);
+  margin-top: 15px;
+  margin-bottom: 23px;
+}
+.quick_order_input_promocode[placeholder]{
+  font-size: 18px;
+  color: #BDBDBD;
+}
+.quick_order_input_promocode:focus{
+  outline: none;
+}
+.payoption__title{
+  font-size: 18px;
+font-weight: 800;
+margin-bottom: 7px;
+}
+@media screen and (min-width: 768px) {
+  .payoption__title{
+    font-size: 30px;
+  margin-bottom: 15px;
+  }
+}
+.payoption__line{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .payoption__list {
   display: flex;
@@ -1717,8 +1840,81 @@ padding-bottom: 52px;
   padding: 13px;
   border: 1px solid #2d2d2d;
   border-radius: 5px;
+  margin-bottom: 12px;
 }
 .payoption__item {
   padding: 10px 0;
   background: #f2f2f2;
+  margin: 0 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 5px;
 }
+.quick_order_terms{
+ margin-bottom: 18px; 
+}
+@media screen and (min-width: 768px) {
+  .quick_order_terms{
+    margin-bottom: 43px; 
+   }
+}
+@media screen and (min-width: 1024px) {
+  .quick_order_terms{
+    margin-bottom: 25px; 
+   }
+}
+.checkbox__label{
+  display: flex;
+  align-items: center;
+}
+.checkbox {
+  appearance: none;
+}
+
+.checkbox__icon-check {
+  position: relative;
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #F9B83F;
+  border-radius: 3px;
+ 
+  margin-right: 11px;
+}
+
+.checkbox:checked + .checkbox__icon-check::before {
+  content: "";
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 7px;
+  display: block;
+   width: 11px;
+  height: 11px;
+  background-image: url(./images/check-accent.svg);
+  background-size: contain;
+  background-origin: border-box;
+  
+}
+.checkbox__text{
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-size: 14px;
+color: #898989;
+}
+.checkbox__text--color{
+  font-family: 'Gilroy-Bold', sans-serif; 
+  font-weight: 700;
+  text-decoration: underline;
+  color: #2b2b2b;
+}
+@media screen and (min-width: 768px) {
+  .checkbox__text{
+    font-size: 18px;
+  }
+}
+.quick_order_buy_button .card__pay-btn{
+  width: 100%;
+}  
