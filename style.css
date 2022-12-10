@@ -371,7 +371,15 @@ a {
     font-size: 20px;
   }
 }
-
+.advantages__text{
+   font-family: 'Gilroy-Medium', sans-serif;
+   font-size: 14px;
+} 
+@media screen and (min-width: 768px) {
+  .advantages__text{
+    font-size: 16px;
+ } 
+}
 .howwork {
   background-color: var(--main--color);
 }
@@ -425,14 +433,12 @@ a {
 }
 @media screen and (min-width: 768px) {
   .howwork__list {
-    column-count: 2;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
   }
 }
-@media screen and (min-width: 1024px) {
-  .howwork__list {
-    display: flex;
-  }
-}
+
 .howwork__item {
   display: flex;
   align-items: center;
@@ -441,12 +447,30 @@ a {
 .howwork__item:last-child {
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .howwork__item {
+    max-width: 46%;
+
+  }
+  .howwork__item:nth-child(2n+1){
+    margin-right: 44px;
+  }
+  
+}
+
 @media screen and (min-width: 1024px) {
   .howwork__item {
     width: 283px;
+    margin-right: 40px;
+  }
+  .howwork__item:nth-child(2n+1){
+    margin-right: 40px;
   }
 }
+
+
 .howwork__text {
+  font-family: 'Gilroy-Medium', sans-serif;
   margin-left: 10px;
 }
 
@@ -476,15 +500,20 @@ a {
   .questions__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-top: 119px;
     padding-bottom: 119px;
   }
 }
 @media screen and (min-width: 1024px) {
   .questions__left-part {
-    margin-right: 113px;
+  max-width: 32%;
   }
+  .questions__right-part {
+    padding-right: 150px;
+    }
 }
+
 .questions__title {
   margin-bottom: 16px;
 }
@@ -746,6 +775,18 @@ display: block;
 .close__text{
   display: none;
 }
+@media screen and (max-width: 1024px) {
+  .catalog__list {
+    display: none;
+  }
+
+  .catalog__info {
+    width: 100%;
+  }
+  .container__inner {
+    flex-wrap: wrap;
+  }
+}
 .catalog__menu:has(.catalog__list.active) .open__text,
 .catalog__menu:has(.catalog__list.active) .open
 {
@@ -919,7 +960,7 @@ display: block;
 .actual__info-text {
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 3px;
+actual__tex  margin-bottom: 3px;
   color: #b5b5b5;
 }
 .actual__info-timer,
@@ -933,6 +974,10 @@ display: block;
 .actual__btn {
   margin: 0 auto;
 }
+.actual__text{
+  font-family: 'Gilroy-Medium', sans-serif;
+  color: #2d2d2d;
+}
 .cards{
   padding-bottom: 49px;
 }
@@ -943,13 +988,18 @@ display: block;
 }
 .cards__title {
   margin-bottom: 15px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .cards__title {
     margin-bottom: 40px;
   }
 }
-
+@media screen and (min-width: 768px) {
+  .cards__title {
+   text-align: ;
+  }
+}
 .card__item {
   width: 100%;
   margin-bottom: 21px;
@@ -992,8 +1042,8 @@ display: block;
   list-style-type: disc;
 }
 .card__info-item {
+  font-family: 'Gilroy-Light', sans-serif; 
   font-size: 12px;
-  font-weight: 400;
   margin-bottom: 16px;
 }
 .card__info-text--sale {
@@ -1062,10 +1112,16 @@ margin-top:20px;
 
 .reviews__title {
   margin-bottom: 29px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .reviews__title {
     margin-bottom: 23px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reviews__title {
+    text-align: start;
   }
 }
 .arrow-left,
@@ -1224,16 +1280,19 @@ margin-top:20px;
   }
 }
 .whywe__title {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .whywe__title {
     margin-bottom: 34px;
+    
   }
 }
 @media screen and (min-width: 1024px) {
   .whywe__title {
     margin-bottom: 39px;
+    text-align: start;
   }
 }
 .whywe__list {
@@ -1268,13 +1327,17 @@ margin-top:20px;
   left: 12px;
 }
 .whywe__item-img {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 }
+
 .whywe__item-title {
   font-size: 20px;
   font-weight: 700;
+  margin-bottom: 13px ;
 }
+
 .whywe__item-text {
+  font-family: 'Gilroy-Medium', sans-serif; 
 }
 .info__inner {
   padding-bottom: 27px;
@@ -1925,6 +1988,7 @@ color: #898989;
   font-weight: 800;
   color: var(--title-color);
   margin-bottom: 25px;
+  text-transform: uppercase;
 }
 .form input,
 .form select{
@@ -1933,6 +1997,7 @@ color: #898989;
   border: 0;
  border-bottom: 1px solid #000000;
  margin-bottom: 15px;
+ outline: none;
 }
 .form input[placeholder]{
   font-size: 18px;
@@ -1941,4 +2006,94 @@ color: #898989;
 .form select{
   font-size: 18px;
   color: #2d2d2d;
+}
+.form .checkbox__label{
+ display: block;
+}
+.form .checkbox {
+  display: none;
+}
+.checkbox__inner{
+  display: flex;
+}
+.form .checkbox__label{
+  margin-top: 20px;
+  margin-bottom: 53px;
+} 
+@media screen and (min-width: 768px) {
+  .form .checkbox__label{
+    margin-bottom: 0;
+  }
+}
+.form .checkbox__icon-check {
+  display: flex;
+  flex: none;
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  margin-right: 11px;
+}
+
+.form .checkbox:checked + .checkbox__inner .checkbox__icon-check::before {
+  content: "";
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 7px;
+  display: block;
+   width: 9px;
+  height: 9px;
+  background-image: url(./images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  
+}
+.form .checkbox__text{
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-size: 12px;
+color: #2d2d2d;
+}
+.line{
+  margin: 0 auto;
+  display: block;
+  width: 271px;
+  border-bottom:  1px solid #000000;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 768px) {
+  .line{
+    display: none;
+    
+  }
+}
+.form p {
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-size: 15px;
+color: #2d2d2d;
+margin-bottom: 7px;
+}
+.stage__list{
+  display: flex;
+  justify-content: space-between;
+}
+.stage__item img{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 31px;
+}
+.stage__number{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.stage__text{
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-size: 18px;
+  text-align: center;
 }

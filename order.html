@@ -11,72 +11,88 @@
   <body>
     <header></header>
     <main>
+      <section class="stage">
+        <div class="container stage__container">
+          <h1 class="stage__title">Your order</h1>
+          <ul class="list stage__list">
+            <li class="stage__item">
+              <img src="./images/1order.svg" alt="" />
+              <p class="stage__number">Step 1</p>
+              <p class="stage__text">Order details</p>
+            </li>
+            <li class="stage__item">
+              <img src="./images/2order.svg" alt="" />
+              <p class="stage__number">Step 2</p>
+              <p class="stage__text">Contact information</p>
+            </li>
+            <li class="stage__item">
+              <img src="./images/3order.svg" alt="" />
+              <p class="stage__number">Step 3</p>
+              <p class="stage__text">Payment</p>
+            </li>
+            <li class="stage__item">
+              <img src="./images/4order.svg" alt="" />
+              <p class="stage__number">Step 4</p>
+              <p class="stage__text">Thank you</p>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section>
         <div class="container">
-      <h2></h2>
-      <ul><li><img src="" alt="">
-      <p></p>
-    <p></p></li>
-    <li><img src="" alt="">
-      <p></p>
-    <p></p></li>
-    <li><img src="" alt="">
-      <p></p>
-    <p></p></li>
-    <li><img src="" alt="">
-      <p></p>
-    <p></p></li>
-</ul></div>
-</section>
-<section><div class="container"><div>
-<form class="form">
-  <div class="form__group">
-  <h3>Character information</h3>
-  <label>
-<input type="name" name="name" placeholder="Character name">
-  </label>
-  <label>
-    <input type="nickname" name="nickname" placeholder="Battle tag">
-  </label>
-  <select name="servername">
-    <option value="value1">Server name</option>
-    <option value="value2">1</option>
-  </select>
-  <select name="servername">
-    <option value="value1">Server name</option>
-    <option value="value2">1</option>
-  </select>
-</div>
-  <div class="form__group">
-  <h3>Contact information</h3>
-  <label>
-    <input type="loginsord" name="loginsord" placeholder="Skype login or discord">
-  </label>
-  <label>
-    <input type="login" name="login" placeholder="Login">
-  </label>
-  <label>
-    <input type="email" name="email" placeholder="E-mail">
-  </label>
-<label>
-  <input class="checkbox" type="checkbox" name="checkbox" />
-  <span class="checkbox__icon-check"> </span>
-  <span class="checkbox__text"
-    >Keep me update on amoboost services, not offers and sales.
-    If you don`t love it, just unsuscribe. We make it easy.</span
-  >
-</label>
-</div>
-<div class="form__group">
-<h3>Additional information</h3>
-<p>Preferable day and time, your main spec, preferable contact method, other info</p>
-<label >
-  <input type="text" placeholder="email@gmail.com">
-</label>
-</div>
-</form>
-</div>
-</div> </section>
+          <div>
+            <form class="form">
+              <div class="form__group">
+                <h3>Character information</h3>
+                <label>
+                  <input type="name" name="name" placeholder="Character name" />
+                </label>
+                <label>
+                  <input type="nickname" name="nickname" placeholder="Battle tag" />
+                </label>
+                <select name="servername">
+                  <option value="value1">Server name</option>
+                  <option value="value2">1</option>
+                </select>
+                <select name="servername">
+                  <option value="value1">Server name</option>
+                  <option value="value2">1</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <h3>Contact information</h3>
+                <label>
+                  <input type="loginsord" name="loginsord" placeholder="Skype login or discord" />
+                </label>
+                <label>
+                  <input type="login" name="login" placeholder="Login" />
+                </label>
+                <label>
+                  <input type="email" name="email" placeholder="E-mail" />
+                </label>
+                <label class="checkbox__label">
+                  <input class="checkbox" type="checkbox" name="checkbox" />
+                  <div class="checkbox__inner">
+                    <span class="checkbox__icon-check"> </span>
+                    <span class="checkbox__text"
+                      >Keep me update on amoboost services, not offers and sales. If you don`t love it, just unsuscribe.
+                      We make it easy.</span
+                    >
+                  </div>
+                </label>
+                <span class="line"> </span>
+              </div>
+              <div class="form__group">
+                <h3>Additional information</h3>
+                <p>Preferable day and time, your main spec, preferable contact method, other info</p>
+                <label>
+                  <input type="text" placeholder="email@gmail.com" />
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>
