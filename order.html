@@ -17,23 +17,31 @@
           <ul class="list stage__list">
             <li class="stage__item">
               <img src="./images/1order.svg" alt="" />
-              <p class="stage__number">Step 1</p>
-              <p class="stage__text">Order details</p>
+              <div class="stage__inner">
+                <p class="stage__number">Step 1</p>
+                <p class="stage__text">Order details</p>
+              </div>
             </li>
             <li class="stage__item">
               <img src="./images/2order.svg" alt="" />
-              <p class="stage__number">Step 2</p>
-              <p class="stage__text">Contact information</p>
+              <div class="stage__inner">
+                <p class="stage__number">Step 2</p>
+                <p class="stage__text">Contact information</p>
+              </div>
             </li>
             <li class="stage__item">
               <img src="./images/3order.svg" alt="" />
-              <p class="stage__number">Step 3</p>
-              <p class="stage__text">Payment</p>
+              <div class="stage__inner">
+                <p class="stage__number">Step 3</p>
+                <p class="stage__text">Payment</p>
+              </div>
             </li>
             <li class="stage__item">
               <img src="./images/4order.svg" alt="" />
-              <p class="stage__number">Step 4</p>
-              <p class="stage__text">Thank you</p>
+              <div class="stage__inner">
+                <p class="stage__number">Step 4</p>
+                <p class="stage__text">Thank you</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -112,7 +120,7 @@
         </div>
       </section>
       <section class="card__order-info">
-        <div class="container">
+        <div class="container card__order-info-container">
           <div class="card__order-info-inner">
             <div class="card__order-info-left">
               <form class="form">
@@ -181,46 +189,67 @@
                 <div class="card__order-info-pay-sale">
                   <div class="card__order-info-pay-sale-wrap">
                     <div>
-                    <p>I have promocode</p>
-                    <label class="label__promcode">
-                      <input />
+                      <p>I have promocode</p>
+                      <label class="label__promcode">
+                        <input placeholder="Promcode" />
+                      </label>
+                    </div>
+                    <label class="checkbox__label">
+                      <input class="checkbox" type="checkbox" name="checkbox" />
+                      <span class="checkbox__icon-check"> </span>
+                      <span class="checkbox__text">Use 10$ from your cashback</span>
                     </label>
                   </div>
-                  <label class="checkbox__label">
-                    <input class="checkbox" type="checkbox" name="checkbox" />
-                    <span class="checkbox__icon-check"> </span>
-                    <span class="checkbox__text">Use 10$ from your cashback</span>
-                  </label></div>
                 </div>
               </div>
-              <div>
+              <div class="card__order-pay">
                 <h3>Choose the payment method</h3>
                 <ul class="list">
                   <li>
                     <label class="checkbox__label">
                       <input class="checkbox" type="checkbox" name="checkbox" />
-                      <div class="checkbox__inner">
-                        <span class="checkbox__icon-check"> </span>
-                        <img src="./images/Square.png" alt="" />
-                      </div>
-                    </label>
+                      <span class="checkbox__icon-check"> </span> </label
+                    ><img src="./images/Square.png" alt="" />
                   </li>
-                  <li><img src="./images/visa.png" alt="" /></li>
-                  <li><img src="./images/giropay.png" alt="" /></li>
-                  <li><img src="./images/Google_Pay_Logo.png" alt="" /></li>
-                  <li><img src="./images/Klarna_Logo_black.png" alt="" /></li>
-                  <li><img src="./images/Mastercard-logo.png" alt="" /></li>
-                  <li><img src="./images/Skrill_logo.png" alt="" /></li>
-                  <li><img src="./images/Apple_Pay_logo.png" alt="" /></li>
-                  <li><img src="./images/cash.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/visa.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/giropay.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/Google_Pay_Logo.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/Klarna_Logo_black.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/Mastercard-logo.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/Skrill_logo.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/Apple_Pay_logo.png" alt="" /></li>
+                  <li><label class="checkbox__label">
+                    <input class="checkbox" type="checkbox" name="checkbox" />
+                    <span class="checkbox__icon-check"> </span> </label
+                  ><img src="./images/cash.png" alt="" /></li>
                 </ul>
-                <span></span>
               </div>
               <div class="card__order-info-pay-wrap">
-                <p>7€</p>
+                <p class="card__order-info-pay-wrap-price">7€</p>
                 <a class="link" href="">Place an order</a>
               </div>
-              <p>Please, file all fleidsto place an order</p>
+              <p class="card__order-info-pay-wrap-notice">Please, file all fleidsto place an order</p>
             </div>
           </div>
         </div>
