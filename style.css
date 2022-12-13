@@ -663,11 +663,6 @@ footer {
     display: flex;
   }
 }
-@media screen and (min-width: 1024px) {
-  .footer__list-nav {
-  }
-}
-
 .footer__item-nav {
   font-family: 'Gilroy-Light', sans-serif;
   font-size: 15px;
@@ -3025,4 +3020,99 @@ footer {
   .contact__address-item p {
     font-size: 20px;
   }
+}
+
+/*Notfound*/
+.notfound__container {
+  padding-top: 41px;
+}
+@media screen and (min-width: 768px) {
+  .notfound__container {
+    padding-top: 72px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .notfound__container {
+    padding-top: 121px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .notfound__left-part {
+    max-width: 46%;
+  }
+}
+.notfound__left-part h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--title-color);
+  margin-bottom: 17px;
+}
+@media screen and (min-width: 768px) {
+  .notfound__left-part h1 {
+    font-size: 65px;
+    margin-bottom: 40px;
+  }
+}
+
+.notfound__left-part-list {
+  margin-bottom: 14px;
+}
+@media screen and (min-width: 768px) {
+  .notfound__left-part-list {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .notfound__left-part-list {
+    margin-bottom: 65px;
+  }
+}
+.notfound__left-part-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.notfound__left-part-item:first-child {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .notfound__left-part-item {
+    font-size: 16px;
+  }
+  .notfound__left-part-item:first-child {
+    margin-bottom: 20px;
+  }
+}
+.navigation__list {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .navigation__list {
+    margin-bottom: 60px;
+  }
+}
+.navigation__item {
+  font-weight: 600;
+  color: #333333;
+  text-decoration: underline;
+}
+.navigation__item:first-child {
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .navigation__item {
+    font-size: 20px;
+  }
+}
+.notfound__left-part-btn {
+  display: block;
+  font-size: 18;
+  font-weight: 700;
+  color: #2d2d2d;
+  text-align: center;
+  width: 321px;
+  padding: 18px 10px;
+  background-color: #f9b83f;
+  border-radius: 5px;
 }
